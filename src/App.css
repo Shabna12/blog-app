@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+/* header */
+.search-bar{
+    border-radius: 20px;
+    padding: 10px;
+}
+.icons{
+    /* justify-content: space-between;
+    align-items: center;
+    display: flex; */
+   margin: 2%;
+}
+#top-icon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    margin: 5px 10px;
+}
+#top-icon:hover{
+    background: orange;
+}
+hr{
+    border: 0;
+    height: 2px;
+    background: white;
+}
+
+.navbar1{
+    margin-left: 320px;
+}
+
+.list{
+    color: white;
+    font-weight: 600;
+    margin: 0 10px;
+}
+.list:hover{
+    color: orangered;
+}
+
+#basic-nav-dropdown{
+    color: white;
+    font-weight: 600;
+}
+#basic-nav-dropdown:hover{
+    color: orangered;
+}
+
+/* footer */
+.bg{
+    background-color: orange;
+    
+}
+.foot-all{
+    color: white;
+    font-weight: 600;
+}
+.icon1{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    margin: 0 10px;
+    color: grey;
+}
+.icon2{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    margin: 0 10px;
+    color: grey;
+}
+.icon3{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    margin: 0 10px;
+    color: grey;
+}
+.icon4{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    margin: 0 10px;
+    color: grey;
+}
+
+/* home */
+
+/* header */
+.header{
+    background-position: center;
+    background-size: cover;
+    max-height: 700px;
+    width: 100%;
+    position: absolute;
+    filter: brightness(35%);
+    -webkit-filter: brightness(35%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* title in pic */
+.title-pic{
+    color: white;
+    text-align: center;
+    margin-top: 90px;
+    font-weight: 1000;
+    font-size: 70px;
+}
+.para-pic{
+    color: white;
+    margin-top: 60px;
+    text-align: center;
+}
+.title2-pic{
+    color: orange;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+/* choose a category */
+.carousel-card{
+    margin-top: 200px;
+}
+.card1{
+    margin-top: 50px;
+}
+.back{
+    text-align: center;
+}
+.set1{
+    transition: all 0.6s;
+    cursor: pointer;
+}
+.set1:hover{
+    transform: scale(1.15);
+}
+
+/* subscribe todAY */
+.form-color{
+    background-color: orange;
+}
+.sub-btn{
+    background-color: white;
+    color: orange;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+/* hiking guide */
+
+/* header */
+.top1{
+    background-position: center;
+    background-size: cover;
+    max-height: 700px;
+    width: 100%;
+    position: absolute;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.top2{
+    background-position: center;
+    background-size: cover;
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    /* filter: brightness(50%);
+    -webkit-filter: brightness(50%); */
+    top: 50%;
+    left: 0;
+    
+}
+.top3{
+    background-position: center;
+    background-size: cover;
+    max-height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    left: 0;
+}
+.top4{
+    background-position: center;
+    background-size: cover;
+    max-height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.down-body{
+    background-color: rgb(2, 30, 34);
+    margin-top: 550px;
+    max-height: 100%;
+}
+.hike-nav{
+    margin-left: 100px;
+}
+.heading1{
+    margin-top: 50px;
+    margin-left: 200px;
+    color: orange;
+    font-weight: 800;
+}
+.heading2{
+    margin-top: 10px;
+    margin-left: 200px;
+    font-weight: 900;
+    font-size: 70px;
+    letter-spacing: 1px;
+    color: white;
+}
+/* content */
+.title-no{
+    font-size: 120px;
+    font-weight: 700;
+    color: rgb(82, 80, 80);
+}
+.overlay-text{
+    color: rgb(241, 200, 110);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 15px;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: -100px;
+}
+.side-head{
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 70px;
+    margin-top: -60px;
+}
+.brief{
+    color: white;
+    margin-top: 30px;
+    margin-left: 70px;
+    font-size: 12px;
+}
+.read-more{
+    color: rgb(241, 200, 110);
+    margin-left: 70px;
+    margin-top: 20px;
+}
+.photo1{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.photo2{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.photo3{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+
+/* My latest blog */
+.blog-full{
+    background-color: skyblue;
+    
+}
+.blog-head{
+    text-align: center;
+    padding: 100px;
+}
+.blog-head1{
+    font-weight: 800;
+    font-size: 100px;
+}
+.post{
+    color: orangered;
+    text-decoration: underline;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.by{
+    color: gray;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.name{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+.date{
+    color: gray;
+    font-weight: 700;
+}
+.exp{
+    color: gray;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* popular post */
+.pp0{
+    font-weight: 800;
+}
+.pp-head{
+    font-weight: 1000;
+}
+.para1{
+    margin-top: -10px;
+}
+.pp1{
+    color: orangered;
+    text-decoration: underline;
+    font-weight: 600;
+    margin: 0 5px;
+    font-size: 12px;
+}
+.pp2{
+    color: gray;
+    margin: 0 5px;
+    font-size: 12px;
+}
+.pp3{
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+}
+.pp4{
+    color: gray;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: -15px;
+}
+
+
