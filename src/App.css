@@ -8,6 +8,27 @@
     font-family: "Playfair Display", serif;
 }
 
+/* login */
+.login-bg{
+    background-image: url(https://media.istockphoto.com/id/1315152008/photo/passport-airplane-tickets-yellow-suitcase-sun-hat-and-protective-face-mask-on-yellow.webp?b=1&s=170667a&w=0&k=20&c=7ZXNxfmh71Z7nJXKWFT4BY-Hp1XZQpgB_LipRf1y_L4=);
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+}
+
+.login-title{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 50px;
+    color: darkblue;
+}
+.login-p{
+    color: darkblue;
+    font-weight: 700;
+}
+
 /* header */
 .search-bar{
     border-radius: 20px;
@@ -32,7 +53,7 @@
 #top-icon:hover{
     background: orange;
 }
-hr{
+.head-line{
     border: 0;
     height: 2px;
     background: white;
@@ -143,8 +164,61 @@ hr{
     margin-top: 30px;
     font-weight: 900;
 }
+/* feature stories - home */
+.fe-home{
+    margin-top: 150px;
+}
+.fe-home-title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+.click-home{
+    margin-top: 50px;
+    text-align: center;
+}
+.down-line{
+    color: black;
+    border: 2;
+    height: 5px;
+}
+
+/* feature */
+.feature-title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+.ted{
+    margin-top: -40px;
+}
+.bbc{
+    margin-top: -25px;
+}
+.res{
+    margin-top: -15px;
+}
+.nat{
+    margin-top: -10px;
+}
+.nest{
+    margin-top: -10px;
+}
+/* about me - home */
+.me-bg{
+    background-color: darkolivegreen;
+    padding: 20px;
+}
+.me-img{
+    border: 10px solid;
+}
 
 /* choose a category */
+.choose-title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
 .carousel-card{
     margin-top: 200px;
 }
@@ -359,5 +433,60 @@ hr{
     font-size: 10px;
     margin-top: -15px;
 }
+/* follow me - icons */
+.follow-title{
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#top-icon1{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding: 5px;
+    /* background-color: white; */
+    color: black;
+    margin: 5px 10px;
+}
+#top-icon1:hover{
+    color: red;
+}
+
+/* About ME */
+.bg-color{
+    background-color: slateblue;
+    padding: 1px;
+}
+.me-title{
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+}
+.me-para{
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+/* featured explore - page */
+.fe-bg{
+    background-color: peachpuff;
+}
+.fe-title{
+    margin-top: 60px;
+    font-weight: 800;
+    font-size: 50px;
+}
+.add-btn{
+   padding: 10px;
+   font-weight: 700;
+   background-color: white;
+   border-radius: 15px;
+}
+.add-btn:hover{
+   color: crimson;
+}
+
+
 
 

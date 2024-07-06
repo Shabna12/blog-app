@@ -9,7 +9,7 @@ const ChooseCategory = () => {
   return (
     <>
       <div className="container carousel-card">
-         <h2 className='text-center'>Choose A Category</h2>
+         <h2 className='text-center choose-title'>Choose A Category</h2>
          <Carousel data-bs-theme="dark">
              <Carousel.Item>
                  <div className='row card1'>

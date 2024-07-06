@@ -28,27 +28,23 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <hr style={{color:'white'}}/>
+        <hr className='head-line'/>
         {/* navbar contents */}
         <Navbar expand="lg" className='navbar1'>
          <Container>
            <Navbar.Toggle aria-controls="basic-navbar-nav" />
            <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="nav-list">
-                <Nav.Link href="#home" className='list'>Home</Nav.Link>
-                <Nav.Link href="#link" className='list'>About Me</Nav.Link>
+                <Nav.Link href="/" className='list'>Home</Nav.Link>
+                <Nav.Link href="/aboutme" className='list'>About Me</Nav.Link>
                 <NavDropdown className='list' title="Category" id="basic-nav-dropdown">
-                 <NavDropdown.Item href="#action/3.1">Solo Travel</NavDropdown.Item>
-                 <NavDropdown.Item href="#action/3.2">
-                   Mount Travel
-                 </NavDropdown.Item>
-                 <NavDropdown.Item href="#action/3.3">Ocean Travel</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">Solo Travel</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Mount Travel</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Ocean Travel</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown className='list' title="Blog" id="basic-nav-dropdown">
-                 <NavDropdown.Item href="#action/3.1">Personal Travel</NavDropdown.Item>
-                 <NavDropdown.Item href="#action/3.2">
-                   Mountain Hiking
-                 </NavDropdown.Item>
+                  <NavDropdown.Item href="/myblog">Personal Travel</NavDropdown.Item>
+                  <NavDropdown.Item href="/hikingguide">Mountain Hiking</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="#home" className='list'>Contact Me</Nav.Link>
               </Nav>
