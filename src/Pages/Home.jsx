@@ -13,6 +13,7 @@ import Card from 'react-bootstrap/Card';
 import r1 from '../assets/Rectangle1.png'
 import r2 from '../assets/Rectangle2.png'
 import r3 from '../assets/Rectangle3.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -63,7 +64,7 @@ const Home = () => {
           </div>
         </div>
         <div className='click-home'>
-          <a style={{textDecoration:'none', fontSize:'20px'}} href="/login">Click Here for More..</a>
+          <Link to="/login"> <p style={{textDecoration:'none', fontSize:'20px'}} >Click Here for More..</p> </Link>
         </div>
       </div >
       
@@ -105,7 +106,7 @@ const Home = () => {
               <h3 className='me-title'>About Me</h3>
               <p className='me-para'>Hello! I'm Ammalu. In 2019, at age 22, I quit my corporate job with a dream of travelling the globe. Two years later, I packed up my life into a backpack and decided to hit the road indefinitely. I travel slow, seek offbeat and local experiences, stay in a place for a few months or as long as it inspires me, and move on.</p>
               <p className='me-para'>I've done a solo land journey from Thailand to India via Myanmar, and travelled overland from the Persian Gulf via Iran to Armenia. I've lived with a Mayan community in Guatemala, volunteered at a coral reef restoration project in Cuba, lived in a nunnery in Ladakh, and shed my fears and clothes at onsens across Japan. I hope to inspire you to step out of your comfort zone and experience the world - slowly, meaningfully and consciously!</p>
-              <a href="/aboutme" style={{textDecoration:'none', color:'white', textAlign:'center'}}> <h6>MORE ABOUT ME</h6> </a>
+              <Link to={"/aboutme"}> <p style={{textDecoration:'none', color:'white', textAlign:'center'}}> <h6>MORE ABOUT ME</h6> </p> </Link>
             </div>
             <div className="col-lg-6 mb-5">
               <img width={'600px'} className='me-img' src={me} alt="" />
