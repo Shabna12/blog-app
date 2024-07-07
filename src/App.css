@@ -487,6 +487,57 @@
    color: crimson;
 }
 
-
+/* media query */
+/* 1000px */
+@media (max-width:1000px){
+    .title-pic{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .para-pic{
+        margin-top: 40px;
+    }
+    .title2-pic{
+        margin-top: 10px;
+    }
+    .me-img{
+        width: 400px;
+        margin-top: 90px;
+    }
+}
+/* 788px */
+@media (max-width:788px){
+    .title-pic{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .para-pic{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .title2-pic{
+        margin-top: 2px;
+    }
+    #top-icon{
+        margin: 2px 5px;
+    }
+}
+/* 758px */
+@media (max-width:758px){
+    .title-pic{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .para-pic{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .title2-pic{
+        margin-top: 2px;
+    }
+    #top-icon{
+        margin: 0px 1px;
+    }
+}
 
 
