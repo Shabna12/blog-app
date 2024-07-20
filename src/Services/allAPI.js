@@ -14,12 +14,17 @@ export const addContentAPI = async(reqBody,reqHeader) => {
     return await commonAPI("POST",`${SERVER_URL}/featuredexplore/add`,reqBody,reqHeader)
 }
 
-// export const allContentAPI = async() => {
-//     //display
-//     return await commonAPI("GET",`${SERVER_URL}/get-all-contents`,"")
-// }
-
 //allFeContentAPI - get -- display
 export const allFeContentAPI = async(reqHeader) => {
     return await commonAPI("GET", `${SERVER_URL}/all-contents`,"",reqHeader)
+}
+
+//update
+export const updateContentAPI = async(cid,reqBody,reqHeader) => {
+    return await commonAPI("PUT", `${SERVER_URL}/featuredexplore/${cid}/update`,reqBody,reqHeader)
+}
+
+//delete - done !!
+export const deleteContentAPI = async(cid,reqHeader) => {
+    return await commonAPI("DELETE", `${SERVER_URL}/featuredexplore/${cid}/delete`,{},reqHeader)
 }

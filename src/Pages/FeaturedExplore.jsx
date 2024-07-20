@@ -12,10 +12,14 @@ import Modal from 'react-bootstrap/Modal';
 import blank from '../assets/upload.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addContentAPI, allFeContentAPI } from '../Services/allAPI';
+import { addContentAPI, allFeContentAPI, deleteContentAPI } from '../Services/allAPI';
 import SERVER_URL from '../Services/server_url';
+import UpdateContents from '../Components/UpdateContents';
+
+
 
 const FeaturedExplore = () => {
+
 
   const [preview, setPreview] = useState(blank)
 
@@ -25,7 +29,7 @@ const FeaturedExplore = () => {
     title:"", description:"", contentImg:""
   })
 
-  const [allContents, setAllContents] = useState([])
+  const [allContents, setAllContents] = useState([])  //display
 
   useEffect(() => {
     getAllContents()
@@ -97,11 +101,33 @@ const FeaturedExplore = () => {
     }
   }
 
-  // modal
+  //delete content
+  const handleDelete = async(cid) => {
+    const token = sessionStorage.getItem("token")
+    if (token) {
+      const reqHeader = {
+        "Content-Type": "multipart/form-data",
+        "Authorization": `Bearer ${token}`
+      }
+      try {
+        const result = await deleteContentAPI(cid,reqHeader)
+        if (result.status==200) {
+          getAllContents()
+        } else {
+          console.log(result);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+
+  // add - modal
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
 
 
@@ -119,10 +145,14 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r1} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>Venice: The Jewel of the Adriatic</Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                 The city's architecture, adorned with Byzantine mosaics and Renaissance art, creates a stunning tapestry that enchants every visitor.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -130,10 +160,14 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r2} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>Hola España: A Travelogue</Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                 Known for its passionate flamenco, delicious tapas, and lively festivals, Spain offers a captivating blend of tradition and modernity.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -141,10 +175,15 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r3} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>"Mystic Tibet: Land of the Himalayas"
+                 </Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Remote land of ancient monasteries, vibrant festivals, and a unique culture that has captivated travelers and scholars alike.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -156,10 +195,14 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r4} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>"Paradise Found: Exploring the Andaman and Nicobar Islands"</Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                   The A&N Islands, located in the Bay of Bengal, are a tropical paradise renowned for their stunning beaches, vibrant coral reefs, and lush rainforests.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -167,10 +210,14 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r5} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>"Greece: Cradle of Civilization and Beauty"</Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                   Where ancient mythology intertwines with breathtaking Mediterranean landscapes,with its rich history, vibrant culture, and sun-drenched islands bathed in azure waters.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -178,10 +225,14 @@ const FeaturedExplore = () => {
              <Card>
                <Card.Img variant="top" src={r6} />
                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
+                 <Card.Title>"Hassan Mosque: A Sacred Oasis in Stone"</Card.Title>
                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                   Stands as a marvel of Almohad architecture, known for its intricate geometric designs and towering minaret, its historical significance and stunning craftsmanship.
                   </Card.Text>
+                  <div className='d-flex'>
+                    <button className='btn text-success'> <i className='fa-solid fa-edit'></i> </button>
+                    <button className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                  </div>
                </Card.Body>
               </Card>
             </div>
@@ -193,19 +244,23 @@ const FeaturedExplore = () => {
               allContents?.length>0?
               allContents?.map(contents => (
                 <div className="col-lg-4" key={contents?._id}>
-                  <Card>
-                    <Card.Img variant="top" src={`${SERVER_URL}/uploads/${contents?.contentImg}`} />
+                  <Card style={{height:'400px'}}>
+                    <Card.Img width={'200px'} height={'200px'} variant="top" src={`${SERVER_URL}/uploads/${contents?.contentImg}`} />
                     <Card.Body>
                      <Card.Title> {contents?.title} </Card.Title>
-                     <Card.Text>
+                     <Card.Text >
                        {contents?.description}
                       </Card.Text>
+                      <div className='d-flex'>
+                       <UpdateContents contents={contents} />
+                       <button onClick={() => handleDelete(contents?._id)} className='btn text-danger'> <i className='fa-solid fa-trash'></i> </button>
+                      </div>
                     </Card.Body>
                   </Card>
                </div>
               ))
               :
-              <div className="fw-bolder text-danger m-5 text-center">YET TO COME...</div>
+              <div className="fw-bolder text-danger m-5 text-center">YET TO COME... </div>
             }
           </div>
         </div>
@@ -242,6 +297,7 @@ const FeaturedExplore = () => {
           <Button onClick={handleAddContent} variant="success">ADD</Button>
         </Modal.Footer>
       </Modal>
+
       <ToastContainer position="top-center" theme="colored"/>
     </>
   )

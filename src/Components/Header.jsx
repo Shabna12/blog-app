@@ -18,15 +18,15 @@ const Header = () => {
           </div>
           <div className="col-4">
             {/* search bar */}
-            <Form.Control type="text" placeholder="Search your Options" className='search-bar'/>
+            {/* <Form.Control type="text" placeholder="Search your Options" className='search-bar'/> */}
           </div>
           <div className="col-4">
             {/* social icons */}
             <div className='ms-5 icons mt-2'>
-             <a href="" id='top-icon'> <i className="fa-brands fa-facebook-f"></i> </a>
-             <a href="" id='top-icon'> <i className="fa-brands fa-x-twitter"></i> </a>
-             <a href="" id='top-icon'> <i className="fa-brands fa-instagram"></i> </a>
-             <a href="" id='top-icon'> <i className="fa-brands fa-youtube"></i> </a>
+             <a href="https://www.linkedin.com/in/shabna-melath-babu-96b063236/" id='top-icon'> <i className="fa-brands fa-facebook-f"></i> </a>
+             <a href="https://www.linkedin.com/in/shabna-melath-babu-96b063236/" id='top-icon'> <i className="fa-brands fa-x-twitter"></i> </a>
+             <a href="https://www.linkedin.com/in/shabna-melath-babu-96b063236/" id='top-icon'> <i className="fa-brands fa-instagram"></i> </a>
+             <a href="https://www.youtube.com/" id='top-icon'> <i className="fa-brands fa-youtube"></i> </a>
             </div>
           </div>
         </div>
