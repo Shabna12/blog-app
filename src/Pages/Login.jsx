@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { loginAPI } from '../Services/allAPI';
+import { tokenAuthContext } from '../Contexts/AuthContext';
 
 
 const Login = () => {
 
+  const {isAuthorised,setIsAuthorised} = useContext(tokenAuthContext)
   const [userData, setUserData] = useState({
     email:"", password:"" 
   })
@@ -24,6 +26,7 @@ const Login = () => {
         if (result.status==200) {
           sessionStorage.setItem("user",JSON.stringify(result.data.user))
           sessionStorage.setItem("token",result.data.token)
+          setIsAuthorised(true)
           setTimeout(() => {
             setUserData({
               email:"", password:""
